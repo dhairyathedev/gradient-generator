@@ -1,11 +1,8 @@
 {
-  "name": "SnowBit",
+  "name": "wizardly-noyce-f1csd",
   "version": "1.0.0",
-  "description": "Simple Gradient Generator Tool",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "bootstrap": "5.1.1",
@@ -15,6 +12,7 @@
     "react-color": "2.19.3",
     "react-dom": "17.0.2",
     "react-highlight": "0.14.0",
+    "react-router-dom": "5.3.0",
     "react-scripts": "4.0.0"
   },
   "devDependencies": {
