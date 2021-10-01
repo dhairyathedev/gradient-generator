@@ -32,6 +32,13 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <h1 className="text-center fw-bolder">
+          Gradient Generator{" "}
+          <span role="img" aria-label="rainbow">
+            🌈
+          </span>
+        </h1>
+        <hr />
         <div
           className="color-preview"
           style={{
