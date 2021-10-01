@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { SliderPicker } from "react-color";
 import "./App.css";
-import ReactCodeSinppet from "react-code-snippet";
+import Highlight from "react-highlight";
 import copy from "copy-to-clipboard";
 
 class App extends Component {
   state = {
     background: "#1256c4",
     background2: "#19e0d3",
-    division: 50
+    division: 50,
+    angle: 240
   };
 
   handleChangeComplete = (color) => {
@@ -21,6 +22,10 @@ class App extends Component {
   handleRange = () => {
     const data = document.getElementById("inputRangePart").value;
     this.setState({ division: data });
+  };
+  handleAngle = () => {
+    const data = document.getElementById("angle").value;
+    this.setState({ angle: data });
   };
   handleCopy = () => {
     copy(
@@ -42,7 +47,7 @@ class App extends Component {
         <div
           className="color-preview"
           style={{
-            background: `linear-gradient(90deg, ${this.state.background} ${this.state.division}%, ${this.state.background2})`
+            background: `linear-gradient(${this.state.angle}deg, ${this.state.background} ${this.state.division}%, ${this.state.background2})`
           }}
         ></div>
         <div
@@ -65,6 +70,17 @@ class App extends Component {
                 step="1"
                 id="inputRangePart"
                 onChange={this.handleRange}
+              />
+              <hr />
+              <h3>Angle - {this.state.angle}deg</h3>
+              <input
+                type="range"
+                min="0"
+                max="360"
+                className="form-range"
+                step="1"
+                id="angle"
+                onChange={this.handleAngle}
               />
             </div>
           </div>
@@ -92,10 +108,9 @@ class App extends Component {
           </div>
           <div className="card">
             <div className="card-body">
-              <ReactCodeSinppet
-                lang="html"
-                code={`background: linear-gradient(90deg, ${this.state.background} ${this.state.division}%, ${this.state.background2})`}
-              ></ReactCodeSinppet>
+              <Highlight language="css">
+                {`background: linear-gradient(90deg, ${this.state.background} ${this.state.division}%, ${this.state.background2})`}
+              </Highlight>
               <button
                 className="btn btn-primary"
                 onClick={this.handleCopy}
