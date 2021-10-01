@@ -109,7 +109,7 @@ class App extends Component {
           <div className="card">
             <div className="card-body">
               <Highlight language="css">
-                {`background: linear-gradient(90deg, ${this.state.background} ${this.state.division}%, ${this.state.background2})`}
+                {`background: linear-gradient(${this.state.angle}deg, ${this.state.background} ${this.state.division}%, ${this.state.background2})`}
               </Highlight>
               <button
                 className="btn btn-primary"
