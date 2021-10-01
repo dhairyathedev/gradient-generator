@@ -27,7 +27,9 @@ class Radial extends Component {
 
   handleCopy = () => {
     copy(
-      `background: linear-gradient(90deg, ${this.state.background} ${this.state.division}%, ${this.state.background2})`
+      `background: radial-gradient(circle, ${this.state.background} ${
+        100 - this.state.division
+      }%, ${this.state.background2} ${this.state.division}%)`
     );
     document.getElementById("copyBtn").innerText = "Copied!";
   };
