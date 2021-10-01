@@ -105,6 +105,25 @@ class App extends Component {
               </button>
             </div>
           </div>
+          <br />
+          <div className="footer">
+            <div className="footer">
+              <center>
+                <hr />
+                <h5>
+                  Opensource -{" "}
+                  <a
+                    href="http://github.com/snowbit-coderboi/gradient-generator"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-decoration-none text-dark fw-bolder"
+                  >
+                    snowbit-coderboi/gradient-generator
+                  </a>
+                </h5>
+              </center>
+            </div>
+          </div>
         </div>
       </div>
     );
