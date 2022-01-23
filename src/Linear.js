@@ -138,12 +138,12 @@ class Linear extends Component {
                 <h5>
                   Opensource -{" "}
                   <a
-                    href="http://github.com/snowbit-coderboi/gradient-generator"
+                    href="http://github.com/codewithsnowbit/gradient-generator"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-decoration-none text-dark fw-bolder"
                   >
-                    snowbit-coderboi/gradient-generator
+                    codewithsnowbit/gradient-generator
                   </a>
                 </h5>
               </center>
